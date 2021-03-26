@@ -144,6 +144,27 @@ public class MainActivity extends AppCompatActivity {
                 markerDot = 0;
                 inputlog.setText(inputlog1);
                 break;
+            case R.id.buttans:
+
+//                inputlog.setText(inputlog1);
+
+                String s = inputlog1.toString();
+                String[] parts = s.split("(?<=-)");
+
+                StringBuffer stringBuffer1 = new StringBuffer(parts[0]);
+                Integer dellen = parts[0].length();
+                stringBuffer1.delete(dellen-1,dellen);
+                parts[0] = stringBuffer1.toString();
+
+                 int b1 = Integer.parseInt(parts[0]);
+                 int b2 = Integer.parseInt(parts[1]);
+                 int b3 = b1-b2;
+
+
+                anslog.setText(Integer.toString(b3));
+
+                break;
+
         }
 
 
