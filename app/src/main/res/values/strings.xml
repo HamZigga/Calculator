@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Calculate</string>
     <string name="placeholdAns">Answer</string>
-    <string name="placeholdInp" >Input log</string>
+    <string name="placeholdInp">Input log</string>
     <string name="but1">1</string>
     <string name="but2">2</string>
     <string name="but3">3</string>
@@ -19,4 +19,12 @@
     <string name="butmult">*</string>
     <string name="butdiv">/</string>
     <string name="butclr">C</string>
+    <string name="butbrL">(</string>
+    <string name="butbrR">)</string>
+    <string name="menuTitleCalc">Calculator</string>
+    <string name="menuTitleTrans">Number system translation</string>
+    <string name="menuTitleLog">Log</string>
+    <string name="log_title">Solution history</string>
+    <string name="logOutputHint">Solutions will be posted here</string>
+    <string name="logButClr">Clear list of logs</string>
 </resources>

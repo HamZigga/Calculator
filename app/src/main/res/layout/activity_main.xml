@@ -7,23 +7,14 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/app_name"
-        android:textSize="24dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/inplog"
         android:layout_width="357dp"
         android:layout_height="49dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="16dp"
         android:hint="@string/placeholdInp"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,10 +32,10 @@
 
     <Button
         android:id="@+id/butt1"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
         android:text="@string/but1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/anslog"
@@ -53,9 +44,9 @@
 
     <Button
         android:id="@+id/buttplus"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
+        android:layout_marginTop="6dp"
         android:onClick="onClickButton"
         android:text="@string/butplus"
         android:textSize="24sp"
@@ -64,9 +55,9 @@
 
     <Button
         android:id="@+id/butt3"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
+        android:layout_marginTop="6dp"
         android:onClick="onClickButton"
         android:text="@string/but3"
         android:textSize="24sp"
@@ -75,9 +66,9 @@
 
     <Button
         android:id="@+id/butt2"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
+        android:layout_marginTop="6dp"
         android:onClick="onClickButton"
         android:text="@string/but2"
         android:textSize="24sp"
@@ -86,9 +77,9 @@
 
     <Button
         android:id="@+id/butt4"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="12dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
+        android:layout_marginStart="6dp"
         android:text="@string/but4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/butt1"
@@ -97,30 +88,29 @@
 
     <Button
         android:id="@+id/buttdot"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="12dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
+        android:onClick="onClickButton"
         android:text="@string/butdot"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/butt7"
         android:textSize="24sp"
-        android:onClick="onClickButton"/>
+        app:layout_constraintStart_toEndOf="@+id/buttclr"
+        app:layout_constraintTop_toBottomOf="@+id/buttbracketL" />
 
     <Button
         android:id="@+id/butt7"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="12dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
+        android:layout_marginStart="6dp"
+        android:onClick="onClickButton"
         android:text="@string/but7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/butt4"
         android:textSize="24sp"
-        android:onClick="onClickButton"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butt4" />
 
     <Button
         android:id="@+id/butt5"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
         android:onClick="onClickButton"
         android:text="@string/but5"
         android:textSize="24sp"
@@ -129,18 +119,19 @@
 
     <Button
         android:id="@+id/butt0"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
+        android:layout_marginStart="6dp"
         android:onClick="onClickButton"
         android:text="@string/but0"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/buttdot"
-        app:layout_constraintTop_toBottomOf="@+id/butt8" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butt7" />
 
     <Button
         android:id="@+id/butt8"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
         android:onClick="onClickButton"
         android:text="@string/but8"
         android:textSize="24sp"
@@ -149,8 +140,8 @@
 
     <Button
         android:id="@+id/butt6"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
         android:onClick="onClickButton"
         android:text="@string/but6"
         android:textSize="24sp"
@@ -159,18 +150,18 @@
 
     <Button
         android:id="@+id/buttans"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
         android:onClick="onClickButton"
         android:text="@string/butans"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/butt0"
-        app:layout_constraintTop_toBottomOf="@+id/butt9" />
+        app:layout_constraintStart_toEndOf="@+id/buttdot"
+        app:layout_constraintTop_toBottomOf="@+id/buttbracketR" />
 
     <Button
         android:id="@+id/butt9"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
         android:onClick="onClickButton"
         android:text="@string/but9"
         android:textSize="24sp"
@@ -179,8 +170,8 @@
 
     <Button
         android:id="@+id/buttmult"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
         android:onClick="onClickButton"
         android:text="@string/butmult"
         android:textSize="24sp"
@@ -189,8 +180,8 @@
 
     <Button
         android:id="@+id/buttminus"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
         android:onClick="onClickButton"
         android:text="@string/butminus"
         android:textSize="24sp"
@@ -199,23 +190,43 @@
 
     <Button
         android:id="@+id/buttdiv"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
         android:onClick="onClickButton"
         android:text="@string/butdiv"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/buttans"
+        app:layout_constraintStart_toEndOf="@+id/buttbracketR"
         app:layout_constraintTop_toBottomOf="@+id/buttmult" />
 
     <Button
         android:id="@+id/buttclr"
-        android:layout_width="86dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="12dp"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
+        android:layout_marginStart="6dp"
         android:onClick="onClickButton"
         android:text="@string/butclr"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttdot" />
+        app:layout_constraintTop_toBottomOf="@+id/butt0" />
+
+    <Button
+        android:id="@+id/buttbracketL"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
+        android:onClick="onClickButton"
+        android:text="@string/butbrL"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/butt0"
+        app:layout_constraintTop_toBottomOf="@+id/butt8" />
+
+    <Button
+        android:id="@+id/buttbracketR"
+        android:layout_width="86sp"
+        android:layout_height="82sp"
+        android:onClick="onClickButton"
+        android:text="@string/butbrR"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/buttbracketL"
+        app:layout_constraintTop_toBottomOf="@+id/butt9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
