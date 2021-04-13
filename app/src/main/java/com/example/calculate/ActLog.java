@@ -1,6 +1,7 @@
 package com.example.calculate;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ public class ActLog extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_log);
+
 
         openLog();
     }
@@ -48,6 +50,10 @@ public class ActLog extends AppCompatActivity {
             case R.id.menu_log:
                 Intent intent = new Intent(this, ActLog.class);
                 startActivity(intent);
+                return true;
+            case R.id.menu_nst2:
+                Intent intent4 = new Intent(this, actNSTto10.class);
+                startActivity(intent4);
                 return true;
         }
         return true;

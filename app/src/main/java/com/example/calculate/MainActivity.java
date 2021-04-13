@@ -1,6 +1,7 @@
 package com.example.calculate;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,8 +24,15 @@ public class MainActivity extends AppCompatActivity {
     int markersymb = 0;
     int markerBracketL = 1;
     int markerBracketR = 0;
+    int markerBracket = 0;
     TextView inputlog, anslog;
     private final static String FILE_NAME = "content.txt";
+
+    String name ="";
+
+    final static String nameVariableKey = "NAME_VARIABLE";
+    final static String textViewTexKey = "TEXTVIEW_TEXT";
+
 
     Button button1,button2,button3,button4,button5,button6,button7,button8,button9,button0,buttonplus,buttonminus,buttonmult,buttondiv,buttonans,buttondot,buttonclr;
     @Override
@@ -57,6 +65,32 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // сохранение состояния
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+
+        outState.putString(nameVariableKey, name);
+        TextView inputlog = (TextView) findViewById(R.id.inplog);
+        outState.putString(textViewTexKey, inputlog.getText().toString());
+
+        super.onSaveInstanceState(outState);
+    }
+    // получение ранее сохраненного состояния
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        name = savedInstanceState.getString(nameVariableKey);
+        String textViewText = savedInstanceState.getString(textViewTexKey);
+        TextView inputlog = (TextView) findViewById(R.id.inplog);
+        StringBuffer strb1 = new StringBuffer(textViewText);
+        inputlog1 = new StringBuffer("");
+        inputlog1.append(strb1);
+        inputlog.setText(inputlog1);
+    }
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -79,6 +113,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_log:
                 Intent intent = new Intent(this, ActLog.class);
                 startActivity(intent);
+                return true;
+            case R.id.menu_nst2:
+                Intent intent4 = new Intent(this, actNSTto10.class);
+                startActivity(intent4);
                 return true;
         }
         return true;
@@ -211,12 +249,14 @@ public class MainActivity extends AppCompatActivity {
                 markerDot = 0;
                 markerBracketL = 1;
                 markerBracketR = 0;
+                markerBracket = 0;
                 inputlog.setText(inputlog1);
                 anslog.setText("");
                 break;
             case R.id.buttbracketL:
                 if (markerBracketL==1) {
                     inputlog1.append("(");
+                    markerBracket +=1;
                     markerDot = 1;
                 }
                 inputlog.setText(inputlog1);
@@ -224,25 +264,30 @@ public class MainActivity extends AppCompatActivity {
             case R.id.buttbracketR:
                 if (markerBracketR==1) {
                     inputlog1.append(")");
+                    markerBracket -=1;
                     markerDot = 1;
                 }
                 inputlog.setText(inputlog1);
                 break;
             case R.id.buttans:
-                String s = inputlog1.toString();
-                Double re = eval(s);
-
-
-                if (re%1==0){
-                    Integer b = (int)Math.round(re);
-                    anslog.setText(b.toString());
+                if (markerBracket!=0){
+                    break;
                 }
                 else {
-                    anslog.setText(re.toString());
-                }
-                saveSolutionLog(view);
+                    String s = inputlog1.toString();
+                    Double re = eval(s);
 
-                break;
+
+                    if (re % 1 == 0) {
+                        Integer b = (int) Math.round(re);
+                        anslog.setText(b.toString());
+                    } else {
+                        anslog.setText(re.toString());
+                    }
+                    saveSolutionLog(view);
+
+                    break;
+                }
 
         }
 
@@ -309,21 +354,11 @@ public class MainActivity extends AppCompatActivity {
                 } else if ((ch >= '0' && ch <= '9') || ch == '.') { // numbers
                     while ((ch >= '0' && ch <= '9') || ch == '.') nextChar();
                     x = Double.parseDouble(str.substring(startPos, this.pos));
-                } else if (ch >= 'a' && ch <= 'z') { // functions
-                    while (ch >= 'a' && ch <= 'z') nextChar();
-                    String func = str.substring(startPos, this.pos);
-                    x = parseFactor();
-                    if (func.equals("sqrt")) x = Math.sqrt(x);
-                    else if (func.equals("sin")) x = Math.sin(Math.toRadians(x));
-                    else if (func.equals("cos")) x = Math.cos(Math.toRadians(x));
-                    else if (func.equals("tan")) x = Math.tan(Math.toRadians(x));
-                    else throw new RuntimeException("Unknown function: " + func);
-                } else {
+                }
+                else {
                     throw new RuntimeException("Unexpected: " + (char)ch);
                 }
-
-                if (eat('^')) x = Math.pow(x, parseFactor()); // exponentiation
-
+                
                 return x;
             }
         }.parse();

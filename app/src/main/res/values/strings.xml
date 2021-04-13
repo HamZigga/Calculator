@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calculate</string>
+    <string name="app_name">Calculator</string>
     <string name="placeholdAns">Answer</string>
     <string name="placeholdInp">Input log</string>
     <string name="but1">1</string>
@@ -22,9 +22,13 @@
     <string name="butbrL">(</string>
     <string name="butbrR">)</string>
     <string name="menuTitleCalc">Calculator</string>
-    <string name="menuTitleTrans">Number system translation</string>
+    <string name="menuTitleTrans">2 → 10</string>
+    <string name="menuTitleTrans2">10 → 2</string>
     <string name="menuTitleLog">Log</string>
     <string name="log_title">Solution history</string>
     <string name="logOutputHint">Solutions will be posted here</string>
     <string name="logButClr">Clear list of logs</string>
+    <string name="nst_title">Translation of number systems</string>
+    <string name="nst_title_2">2 → 10</string>
+
 </resources>
