@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/inplog"
+        android:layout_width="333dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:hint="@string/placeholdInp"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/anslog"
+        android:layout_width="327dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/placeholdAns"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inplog" />
+
+    <Button
+        android:id="@+id/butt1"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:onClick="onClickButton"
+        android:text="@string/but1"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/anslog" />
+
+    <Button
+        android:id="@+id/buttplus"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_marginTop="6dp"
+        android:onClick="onClickButton"
+        android:text="@string/butplus"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/butt5"
+        app:layout_constraintTop_toBottomOf="@+id/anslog" />
+
+    <Button
+        android:id="@+id/butt3"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_marginTop="6dp"
+        android:onClick="onClickButton"
+        android:text="@string/but3"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/butt2"
+        app:layout_constraintTop_toBottomOf="@+id/anslog" />
+
+    <Button
+        android:id="@+id/butt2"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_marginTop="6dp"
+        android:onClick="onClickButton"
+        android:text="@string/but2"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/butt1"
+        app:layout_constraintTop_toBottomOf="@+id/anslog" />
+
+    <Button
+        android:id="@+id/butt4"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_marginTop="6dp"
+        android:onClick="onClickButton"
+        android:text="@string/but4"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/butt3"
+        app:layout_constraintTop_toBottomOf="@+id/anslog" />
+
+    <Button
+        android:id="@+id/buttdot"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:onClick="onClickButton"
+        android:text="@string/butdot"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/buttmult"
+        app:layout_constraintTop_toBottomOf="@+id/buttans" />
+
+    <Button
+        android:id="@+id/butt7"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:onClick="onClickButton"
+        android:text="@string/but7"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/butt6"
+        app:layout_constraintTop_toBottomOf="@+id/butt2" />
+
+    <Button
+        android:id="@+id/butt5"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_marginTop="6dp"
+        android:onClick="onClickButton"
+        android:text="@string/but5"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/butt4"
+        app:layout_constraintTop_toBottomOf="@+id/anslog" />
+
+    <Button
+        android:id="@+id/butt0"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:onClick="onClickButton"
+        android:text="@string/but0"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/butt9"
+        app:layout_constraintTop_toBottomOf="@+id/butt5" />
+
+    <Button
+        android:id="@+id/butt8"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:onClick="onClickButton"
+        android:text="@string/but8"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/butt7"
+        app:layout_constraintTop_toBottomOf="@+id/butt3" />
+
+    <Button
+        android:id="@+id/butt6"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_marginStart="6dp"
+        android:onClick="onClickButton"
+        android:text="@string/but6"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butt1" />
+
+    <Button
+        android:id="@+id/buttans"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:onClick="onClickButton"
+        android:text="@string/butans"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttmult"
+        app:layout_constraintStart_toEndOf="@+id/buttbracketR" />
+
+    <Button
+        android:id="@+id/butt9"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:onClick="onClickButton"
+        android:text="@string/but9"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/butt8"
+        app:layout_constraintTop_toBottomOf="@+id/butt4" />
+
+    <Button
+        android:id="@+id/buttmult"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_marginTop="6dp"
+        android:onClick="onClickButton"
+        android:text="@string/butmult"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/buttplus"
+        app:layout_constraintTop_toBottomOf="@+id/anslog" />
+
+    <Button
+        android:id="@+id/buttminus"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:onClick="onClickButton"
+        android:text="@string/butminus"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/butt0"
+        app:layout_constraintTop_toBottomOf="@+id/buttplus" />
+
+    <Button
+        android:id="@+id/buttdiv"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:onClick="onClickButton"
+        android:text="@string/butdiv"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/buttminus"
+        app:layout_constraintTop_toBottomOf="@+id/buttmult" />
+
+    <Button
+        android:id="@+id/buttclr"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:onClick="onClickButton"
+        android:text="@string/butclr"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/buttdiv"
+        app:layout_constraintTop_toBottomOf="@+id/buttdot" />
+
+    <Button
+        android:id="@+id/buttbracketL"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_marginStart="4dp"
+        android:onClick="onClickButton"
+        android:text="@string/butbrL"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/butt5"
+        app:layout_constraintStart_toEndOf="@+id/anslog" />
+
+    <Button
+        android:id="@+id/buttbracketR"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:onClick="onClickButton"
+        android:text="@string/butbrR"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttplus"
+        app:layout_constraintStart_toEndOf="@+id/buttbracketL" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

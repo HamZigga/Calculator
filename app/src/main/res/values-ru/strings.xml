@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Калькулятор</string>
+    <string name="placeholdAns">Ответ</string>
+    <string name="placeholdInp">Журнал ввода</string>
+    <string name="but1">1</string>
+    <string name="but2">2</string>
+    <string name="but3">3</string>
+    <string name="but4">4</string>
+    <string name="but5">5</string>
+    <string name="but6">6</string>
+    <string name="but7">7</string>
+    <string name="but8">8</string>
+    <string name="but9">9</string>
+    <string name="but0">0</string>
+    <string name="butdot">,</string>
+    <string name="butans">=</string>
+    <string name="butplus">+</string>
+    <string name="butminus">-</string>
+    <string name="butmult">*</string>
+    <string name="butdiv">/</string>
+    <string name="butclr">C</string>
+    <string name="butbrL">(</string>
+    <string name="butbrR">)</string>
+    <string name="menuTitleCalc">Калькулятор</string>
+    <string name="menuTitleTrans">2 → 10</string>
+    <string name="menuTitleTrans2">10 → 2</string>
+    <string name="menuTitleLog">Журнал</string>
+    <string name="log_title">История решений</string>
+    <string name="logOutputHint">Здесь будет история решений</string>
+    <string name="logButClr">Очистить журнал</string>
+    <string name="nst_title">Перевод систем счисления</string>
+    <string name="nst_title_2">2 → 10</string>
+
+</resources>
